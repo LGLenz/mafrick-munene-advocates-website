@@ -1,0 +1,1481 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Mafrick &amp; Company Advocates — Justice. Integrity. Excellence.</title>
+<meta name="description" content="Mafrick &amp; Company Advocates is a Kenya-based law firm and NGO offering legal services, data protection counsel (Kenya DPA/GDPR), human rights advocacy, NGO support, and civic education." />
+<meta name="theme-color" content="#1a2744" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://mafrick-advocates.co.ke/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Mafrick &amp; Company Advocates" />
+<meta property="og:title" content="Mafrick &amp; Company Advocates — Justice. Integrity. Excellence." />
+<meta property="og:description" content="Kenya-based law firm and NGO. Legal services, data protection, human rights, NGO support, and civic education." />
+<meta property="og:url" content="https://mafrick-advocates.co.ke/" />
+<meta property="og:locale" content="en_KE" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Mafrick &amp; Company Advocates" />
+<meta name="twitter:description" content="Justice. Integrity. Excellence. Kenya-based advocates and civic-education NGO." />
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%231a2744'/><path d='M16 46V18l16 22 16-22v28' fill='none' stroke='%23c9a227' stroke-width='4' stroke-linejoin='round' stroke-linecap='round'/><circle cx='32' cy='52' r='2.5' fill='%23c9a227'/></svg>" />
+
+<!-- JSON-LD: LegalService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Mafrick & Company Advocates",
+  "description": "Kenya-based law firm and NGO offering legal services, data protection counsel, human rights advocacy, NGO support, and civic education.",
+  "areaServed": "KE",
+  "email": "contact@mafrick-advocates.co.ke",
+  "telephone": "+254 (0) 700 000 000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Mafrick Chambers, Lenana Road",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  }
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =====================================================================
+   Mafrick & Company Advocates — single-file production site
+   Deep navy #1a2744, gold/amber #c9a227, clean white
+   Type: Playfair Display (display) + Inter (body)
+   ===================================================================== */
+
+:root {
+  --navy:        #1a2744;
+  --navy-900:    #11192c;
+  --navy-700:    #243358;
+  --navy-50:     #f3f5fb;
+  --gold:        #c9a227;
+  --gold-600:    #b08f1c;
+  --gold-100:    #f6ebc4;
+  --white:       #ffffff;
+  --cream:       #fbfaf6;
+  --ink:         #1d2535;
+  --ink-muted:   #5a6378;
+  --ink-faint:   #8a92a4;
+  --line:        #e6e8ef;
+  --line-strong: #cfd3df;
+
+  --shadow-sm: 0 1px 2px rgba(17,25,44,.06), 0 1px 3px rgba(17,25,44,.04);
+  --shadow-md: 0 6px 18px rgba(17,25,44,.08), 0 2px 6px rgba(17,25,44,.05);
+  --shadow-lg: 0 24px 60px rgba(17,25,44,.14), 0 8px 20px rgba(17,25,44,.08);
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 3vw, 2.5rem);
+
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --ease: cubic-bezier(.2,.7,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: var(--navy); text-decoration: none; }
+a:hover { color: var(--gold-600); }
+
+::selection { background: var(--gold); color: var(--navy-900); }
+
+/* Skip link */
+.skip {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--navy); color: #fff; padding: .75rem 1rem; z-index: 1000;
+  border-radius: 0 0 var(--r-sm) 0;
+}
+.skip:focus { left: 0; }
+
+/* Layout */
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+section { padding: clamp(4rem, 8vw, 6.5rem) 0; }
+.section-head { max-width: 720px; margin-bottom: clamp(2rem, 4vw, 3rem); }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font-family: var(--font-body);
+  font-size: .8rem; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--gold-600);
+}
+.eyebrow::before {
+  content: ""; width: 28px; height: 1.5px; background: var(--gold);
+}
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--navy); letter-spacing: -.01em; line-height: 1.15; margin: 0 0 .6em; }
+h1 { font-weight: 700; font-size: clamp(2.25rem, 5vw + .5rem, 4.25rem); }
+h2 { font-weight: 700; font-size: clamp(1.85rem, 3vw + .5rem, 2.75rem); margin-top: .25rem; }
+h3 { font-weight: 600; font-size: clamp(1.25rem, 1.4vw + .6rem, 1.5rem); }
+h4 { font-weight: 600; font-size: 1.05rem; letter-spacing: 0; }
+p  { margin: 0 0 1rem; color: var(--ink); }
+.lead { font-size: clamp(1.05rem, .4vw + 1rem, 1.18rem); color: var(--ink-muted); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+  padding: .9rem 1.4rem;
+  border-radius: var(--r-sm);
+  font-family: var(--font-body);
+  font-weight: 600; font-size: .98rem;
+  letter-spacing: .01em;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease),
+              color .25s var(--ease), border-color .25s var(--ease), box-shadow .25s var(--ease);
+  white-space: nowrap;
+}
+.btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.btn-primary { background: var(--gold); color: var(--navy-900); border-color: var(--gold); }
+.btn-primary:hover { background: var(--gold-600); border-color: var(--gold-600); color: var(--navy-900); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-ghost { background: transparent; color: var(--white); border-color: rgba(255,255,255,.45); }
+.btn-ghost:hover { background: rgba(255,255,255,.08); border-color: var(--white); color: var(--white); transform: translateY(-1px); }
+.btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+.btn-outline:hover { background: var(--navy); color: #fff; transform: translateY(-1px); }
+.btn .arrow { transition: transform .25s var(--ease); }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* ============ Header / Nav ============ */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+  background: rgba(26, 39, 68, .92);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background-color .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+.site-header.scrolled {
+  background: rgba(17, 25, 44, .96);
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: .75rem;
+  color: #fff; font-family: var(--font-display); font-weight: 600;
+}
+.brand:hover { color: #fff; }
+.brand-mark {
+  width: 40px; height: 40px; flex: 0 0 auto;
+  color: var(--gold);
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+.brand-name { font-size: 1.05rem; letter-spacing: .01em; }
+.brand-tag {
+  font-family: var(--font-body); font-size: .7rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .22em; color: var(--gold);
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 2rem;
+  list-style: none; padding: 0; margin: 0;
+}
+.nav-links a {
+  color: rgba(255,255,255,.86);
+  font-size: .95rem; font-weight: 500;
+  padding: .35rem 0; position: relative;
+  transition: color .2s var(--ease);
+}
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px;
+  background: var(--gold); transform: scaleX(0); transform-origin: left;
+  transition: transform .3s var(--ease);
+}
+.nav-links a:hover, .nav-links a.is-active { color: #fff; }
+.nav-links a:hover::after, .nav-links a.is-active::after { transform: scaleX(1); }
+.nav-cta { display: inline-flex; }
+.nav-cta .btn { padding: .65rem 1.05rem; font-size: .88rem; }
+
+/* Hamburger */
+.nav-toggle {
+  display: none;
+  width: 44px; height: 44px;
+  background: transparent; border: 0; padding: 0;
+  cursor: pointer;
+  color: #fff;
+  border-radius: var(--r-sm);
+}
+.nav-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.nav-toggle .bars {
+  position: relative; display: block; width: 22px; height: 16px; margin: 0 auto;
+}
+.nav-toggle .bars span {
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: currentColor; border-radius: 2px;
+  transition: transform .3s var(--ease), top .3s var(--ease), opacity .2s var(--ease);
+}
+.nav-toggle .bars span:nth-child(1) { top: 0; }
+.nav-toggle .bars span:nth-child(2) { top: 7px; }
+.nav-toggle .bars span:nth-child(3) { top: 14px; }
+.nav-toggle[aria-expanded="true"] .bars span:nth-child(1) { top: 7px; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .bars span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .bars span:nth-child(3) { top: 7px; transform: rotate(-45deg); }
+
+@media (max-width: 960px) {
+  .nav-cta { display: none; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav-links {
+    position: fixed; inset: 64px 0 0 0;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--navy-900);
+    padding: 1rem var(--gutter) 2rem;
+    transform: translateX(100%);
+    transition: transform .35s var(--ease);
+    overflow-y: auto;
+  }
+  .nav-links.is-open { transform: translateX(0); }
+  .nav-links li { border-bottom: 1px solid rgba(255,255,255,.07); }
+  .nav-links a { display: block; padding: 1.05rem .25rem; font-size: 1.1rem; }
+  .nav-links a::after { display: none; }
+  .nav-links .mobile-cta { padding-top: 1.4rem; border: 0; }
+  .nav-links .mobile-cta .btn { display: flex; }
+}
+
+/* ============ Hero ============ */
+.hero {
+  position: relative; isolation: isolate;
+  color: #fff;
+  background: var(--navy);
+  padding: clamp(8rem, 14vw, 11rem) 0 clamp(5rem, 8vw, 7rem);
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0; z-index: -2;
+  background:
+    radial-gradient(900px 500px at 85% 10%, rgba(201,162,39,.22), transparent 60%),
+    radial-gradient(700px 500px at 15% 90%, rgba(36,51,88,.7), transparent 65%),
+    linear-gradient(180deg, #11192c 0%, #1a2744 55%, #1a2744 100%);
+}
+.hero::after {
+  /* Subtle scales-of-justice motif as decorative texture */
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%);
+  opacity: .55;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+}
+.hero h1 {
+  color: #fff;
+  font-weight: 700;
+}
+.hero h1 .accent { color: var(--gold); font-style: italic; font-weight: 500; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: .65rem;
+  color: var(--gold); font-weight: 600;
+  font-size: .82rem; letter-spacing: .18em; text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.hero-eyebrow::before { content: ""; width: 32px; height: 1.5px; background: var(--gold); }
+.hero-lead {
+  font-size: clamp(1.05rem, .35vw + 1rem, 1.2rem);
+  color: rgba(255,255,255,.82);
+  max-width: 56ch;
+  margin-bottom: 2rem;
+}
+.hero-cta { display: flex; flex-wrap: wrap; gap: .9rem; }
+.hero-meta {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+  margin-top: 2.5rem; padding-top: 1.75rem;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.hero-meta div { min-width: 130px; }
+.hero-meta dt {
+  font-size: .72rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .35rem; font-weight: 600;
+}
+.hero-meta dd {
+  margin: 0; font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: #fff;
+}
+
+/* Hero emblem / visual */
+.hero-emblem {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  max-width: 460px;
+  margin-left: auto;
+}
+.hero-emblem svg { width: 100%; height: 100%; }
+.hero-emblem .ring {
+  position: absolute; inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(201,162,39,.35);
+  animation: ringSpin 40s linear infinite;
+}
+.hero-emblem .ring.inner {
+  inset: 10%;
+  border-style: dashed;
+  animation-duration: 60s;
+  animation-direction: reverse;
+}
+@keyframes ringSpin { to { transform: rotate(360deg); } }
+
+/* ============ Section: About ============ */
+.about { background: var(--cream); }
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+.about-pillars {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+  margin-top: 2rem;
+}
+@media (max-width: 520px) { .about-pillars { grid-template-columns: 1fr; } }
+.pillar {
+  background: #fff; border: 1px solid var(--line);
+  padding: 1.25rem 1.25rem 1.1rem;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+.pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.pillar h4 { color: var(--navy); margin-bottom: .25rem; }
+.pillar p { font-size: .95rem; color: var(--ink-muted); margin: 0; }
+.pillar .num {
+  font-family: var(--font-display); font-weight: 600;
+  color: var(--gold-600); font-size: .9rem; letter-spacing: .14em;
+  display: block; margin-bottom: .35rem;
+}
+
+/* ============ Practice Areas ============ */
+.practice { background: #fff; }
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.practice-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1.75rem 1.5rem 1.5rem;
+  transition: transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+  overflow: hidden;
+}
+.practice-card::before {
+  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--gold); transform: scaleY(0); transform-origin: top;
+  transition: transform .35s var(--ease);
+}
+.practice-card:hover { transform: translateY(-4px); border-color: var(--line-strong); box-shadow: var(--shadow-md); }
+.practice-card:hover::before { transform: scaleY(1); }
+.practice-card .icon {
+  width: 48px; height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--navy-50); color: var(--navy);
+  border-radius: var(--r-sm);
+  margin-bottom: 1.1rem;
+  transition: background-color .3s var(--ease), color .3s var(--ease);
+}
+.practice-card:hover .icon { background: var(--navy); color: var(--gold); }
+.practice-card h3 { margin-bottom: .5rem; }
+.practice-card p { color: var(--ink-muted); font-size: .96rem; margin: 0; }
+.practice-card ul {
+  margin: .9rem 0 0; padding: 0; list-style: none;
+  display: flex; flex-wrap: wrap; gap: .35rem .5rem;
+}
+.practice-card li {
+  font-size: .78rem; font-weight: 500; color: var(--navy-700);
+  background: var(--navy-50); padding: .25rem .55rem; border-radius: 999px;
+}
+
+/* ============ Services ============ */
+.services { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
+.services::before {
+  content: ""; position: absolute; inset: 0; opacity: .45; pointer-events: none;
+  background:
+    radial-gradient(700px 360px at 90% 10%, rgba(201,162,39,.12), transparent 65%),
+    radial-gradient(900px 500px at -10% 110%, rgba(255,255,255,.04), transparent 60%);
+}
+.services .container { position: relative; }
+.services h2 { color: #fff; }
+.services .eyebrow { color: var(--gold); }
+.services .eyebrow::before { background: var(--gold); }
+.services .lead { color: rgba(255,255,255,.78); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.service-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--r-md);
+  padding: 1.6rem 1.5rem;
+  transition: background .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+}
+.service-card:hover { background: rgba(255,255,255,.07); border-color: rgba(201,162,39,.45); transform: translateY(-3px); }
+.service-card .ico {
+  width: 44px; height: 44px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(201,162,39,.5);
+  color: var(--gold); border-radius: var(--r-sm);
+  margin-bottom: 1rem;
+}
+.service-card h3 { color: #fff; margin-bottom: .45rem; font-size: 1.2rem; }
+.service-card p { color: rgba(255,255,255,.74); font-size: .96rem; margin: 0 0 .9rem; }
+.service-card .more {
+  display: inline-flex; align-items: center; gap: .4rem;
+  color: var(--gold); font-weight: 600; font-size: .88rem;
+  letter-spacing: .04em;
+}
+
+/* ============ Team ============ */
+.team { background: var(--cream); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.team-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: var(--r-md); overflow: hidden;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.team-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background:
+    linear-gradient(160deg, var(--navy) 0%, var(--navy-700) 100%);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold);
+  overflow: hidden;
+}
+.team-photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 35%, rgba(201,162,39,.18), transparent 60%);
+}
+.team-monogram {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 3rem; color: var(--gold);
+  width: 110px; height: 110px;
+  border: 1.5px solid rgba(201,162,39,.55);
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.04);
+  z-index: 1;
+}
+.team-info { padding: 1.25rem 1.4rem 1.5rem; }
+.team-info h3 { font-size: 1.18rem; margin-bottom: .2rem; }
+.team-role {
+  font-family: var(--font-body); font-size: .82rem;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold-600); font-weight: 600; margin: 0 0 .6rem;
+}
+.team-bio { font-size: .92rem; color: var(--ink-muted); margin: 0; }
+.team-note {
+  margin-top: 1.75rem; font-size: .9rem; color: var(--ink-muted);
+  text-align: center;
+}
+
+/* ============ Contact ============ */
+.contact { background: #fff; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-card {
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  position: relative; overflow: hidden;
+}
+.contact-card::before {
+  content: ""; position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px;
+  background: radial-gradient(circle, rgba(201,162,39,.22), transparent 70%);
+  border-radius: 50%;
+}
+.contact-card h3 { color: #fff; }
+.contact-card .eyebrow { color: var(--gold); }
+.contact-card .eyebrow::before { background: var(--gold); }
+.contact-list { list-style: none; margin: 1.5rem 0 0; padding: 0; }
+.contact-list li {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.contact-list li:first-child { border-top: 0; }
+.contact-list .ico {
+  flex: 0 0 auto;
+  width: 38px; height: 38px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--r-sm);
+  background: rgba(201,162,39,.14); color: var(--gold);
+}
+.contact-list .lbl {
+  font-size: .72rem; font-weight: 600; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: .15rem;
+}
+.contact-list .val { color: #fff; font-size: 1rem; line-height: 1.5; }
+.contact-list a { color: #fff; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,.25); }
+.contact-list a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+.contact-hours {
+  margin-top: 1.5rem; padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,.12);
+  font-size: .9rem; color: rgba(255,255,255,.78);
+}
+
+/* Form */
+.form-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-sm);
+}
+.form-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.1rem;
+}
+.form-grid .full { grid-column: 1 / -1; }
+@media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+
+.field { display: flex; flex-direction: column; gap: .35rem; }
+.field label {
+  font-size: .78rem; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--navy);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: inherit; font-size: 1rem; color: var(--ink);
+  background: var(--cream);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: .8rem .9rem;
+  transition: border-color .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+}
+.field textarea { min-height: 130px; resize: vertical; line-height: 1.5; }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(26,39,68,.10);
+}
+.field .hint { font-size: .8rem; color: var(--ink-faint); }
+
+.form-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+  margin-top: 1.4rem;
+}
+.form-status {
+  font-size: .92rem; color: var(--ink-muted);
+  min-height: 1.4em;
+}
+.form-status.is-success { color: #1f6c3b; }
+.form-status.is-error   { color: #9b2b2b; }
+
+/* ============ Footer ============ */
+.site-footer {
+  background: var(--navy-900);
+  color: rgba(255,255,255,.74);
+  padding: 4rem 0 1.5rem;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+@media (max-width: 900px) {
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+@media (max-width: 540px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+.footer-brand .brand { color: #fff; margin-bottom: .9rem; }
+.footer-brand p { color: rgba(255,255,255,.62); font-size: .95rem; max-width: 38ch; }
+.footer-col h5 {
+  font-family: var(--font-body);
+  font-size: .78rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 1rem; font-weight: 600;
+}
+.footer-col ul { list-style: none; padding: 0; margin: 0; }
+.footer-col li { margin-bottom: .55rem; }
+.footer-col a { color: rgba(255,255,255,.72); font-size: .95rem; }
+.footer-col a:hover { color: var(--gold); }
+
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 1rem;
+  padding-top: 1.5rem;
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+}
+.footer-bottom a { color: rgba(255,255,255,.7); }
+.footer-bottom a:hover { color: var(--gold); }
+.partner-credit {
+  display: inline-flex; align-items: center; gap: .55rem;
+  color: rgba(255,255,255,.65);
+}
+.partner-credit .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); display: inline-block;
+}
+.partner-credit strong { color: #fff; font-weight: 600; letter-spacing: .02em; }
+
+/* ============ Reveal animations ============ */
+.reveal {
+  opacity: 0; transform: translateY(18px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+  will-change: opacity, transform;
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+.reveal[data-delay="1"].is-visible { transition-delay: .08s; }
+.reveal[data-delay="2"].is-visible { transition-delay: .16s; }
+.reveal[data-delay="3"].is-visible { transition-delay: .24s; }
+.reveal[data-delay="4"].is-visible { transition-delay: .32s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* Focus-visible globally tightened */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reduce text rendering of section dividers on print */
+@media print {
+  .site-header, .nav-toggle, .hero-cta, form, .site-footer { display: none !important; }
+  body { color: #000; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ Header ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="Mafrick & Company Advocates — home">
+      <!-- Inline SVG logo: stylised 'M' formed by columns of a temple/courthouse, with a gold base bar -->
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect x="2" y="2" width="60" height="60" rx="10" fill="#1a2744" stroke="rgba(201,162,39,.45)" stroke-width="1"/>
+        <!-- columns -->
+        <path d="M14 46V20" stroke="#c9a227" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M50 46V20" stroke="#c9a227" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <!-- M peaks -->
+        <path d="M14 20 L32 40 L50 20" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+        <!-- base / scales bar -->
+        <path d="M10 50 H54" stroke="#c9a227" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="32" cy="55" r="2" fill="#c9a227"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Mafrick &amp; Company</span>
+        <span class="brand-tag">Advocates</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#practice">Practice</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="mobile-cta"><a class="btn btn-primary" href="#contact">Book a Consultation <span class="arrow" aria-hidden="true">→</span></a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contact">Book a Consultation <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <a id="top" tabindex="-1"></a>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div>
+        <span class="hero-eyebrow">Advocates · NGO · Civic Educators</span>
+        <h1 id="hero-title">
+          Mafrick &amp; Company Advocates —
+          <span class="accent">Justice. Integrity. Excellence.</span>
+        </h1>
+        <p class="hero-lead">
+          A Kenyan law firm and civic-minded NGO partnering with citizens,
+          institutions, and communities to advance the rule of law, defend
+          fundamental rights, and build a more informed Republic.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Schedule a Consultation <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#practice">Explore Practice Areas</a>
+        </div>
+
+        <dl class="hero-meta" aria-label="Firm highlights">
+          <div>
+            <dt>Founded</dt>
+            <dd>Nairobi, Kenya</dd>
+          </div>
+          <div>
+            <dt>Focus</dt>
+            <dd>Law &amp; Civic Reform</dd>
+          </div>
+          <div>
+            <dt>Reach</dt>
+            <dd>Counties &amp; Beyond</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-emblem" aria-hidden="true">
+        <span class="ring"></span>
+        <span class="ring inner"></span>
+        <!-- Decorative scales-of-justice emblem -->
+        <svg viewBox="0 0 400 400" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="goldGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%"  stop-color="#e9c655"/>
+              <stop offset="60%" stop-color="#c9a227"/>
+              <stop offset="100%" stop-color="#8c6f15"/>
+            </linearGradient>
+          </defs>
+          <!-- center column -->
+          <rect x="196" y="120" width="8" height="170" rx="2" fill="url(#goldGrad)"/>
+          <!-- top finial -->
+          <circle cx="200" cy="115" r="9" fill="url(#goldGrad)"/>
+          <!-- crossbeam -->
+          <rect x="110" y="148" width="180" height="5" rx="2" fill="url(#goldGrad)"/>
+          <!-- left chain -->
+          <path d="M125 155 L150 215" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M125 155 L100 215" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- right chain -->
+          <path d="M275 155 L300 215" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <path d="M275 155 L250 215" stroke="url(#goldGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- left pan -->
+          <path d="M85 215 Q125 250 165 215 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+          <path d="M85 215 Q125 235 165 215" fill="rgba(201,162,39,.10)"/>
+          <!-- right pan -->
+          <path d="M235 215 Q275 250 315 215 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2.5"/>
+          <path d="M235 215 Q275 235 315 215" fill="rgba(201,162,39,.10)"/>
+          <!-- base -->
+          <rect x="170" y="290" width="60" height="6" rx="2" fill="url(#goldGrad)"/>
+          <rect x="150" y="296" width="100" height="4" rx="2" fill="url(#goldGrad)" opacity=".75"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ About ============ -->
+  <section class="about" id="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About the Firm</span>
+        <h2 id="about-title">A law firm built for rights, reform, and the public good.</h2>
+        <p class="lead">
+          Mafrick &amp; Company Advocates is dual in design: a Kenyan
+          legal practice serving private clients, businesses, and institutions,
+          and a registered NGO arm partnering with civic actors to expand
+          access to justice across the country.
+        </p>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <p>
+          From our base in Nairobi, our advocates appear before the
+          Magistrates&rsquo; Courts, the Employment &amp; Labour Relations
+          Court, the High Court, the Court of Appeal, and the
+          tribunals that shape commercial life in Kenya. We combine
+          rigorous black-letter practice with a long-standing commitment
+          to public-interest work — from constitutional petitions to
+          county-level civic engagement programmes.
+        </p>
+        <p>
+          Through our cooperation with allied non-governmental
+          organisations, we deliver pro bono representation, paralegal
+          training, and policy advocacy. Our civic-education mandate
+          equips ordinary Kenyans — youth, women, and marginalised
+          communities — to understand the Constitution of Kenya 2010,
+          assert their rights, and hold institutions to account.
+        </p>
+
+        <div class="about-pillars">
+          <div class="pillar">
+            <span class="num">01</span>
+            <h4>Law Firm</h4>
+            <p>Full-service advocates serving commercial and individual clients across Kenya.</p>
+          </div>
+          <div class="pillar">
+            <span class="num">02</span>
+            <h4>NGO Cooperation</h4>
+            <p>Partnerships with civil-society organisations on rights, reform, and access to justice.</p>
+          </div>
+          <div class="pillar">
+            <span class="num">03</span>
+            <h4>Civic Education</h4>
+            <p>Community-based programmes building constitutional literacy and democratic participation.</p>
+          </div>
+          <div class="pillar">
+            <span class="num">04</span>
+            <h4>Public Interest</h4>
+            <p>Strategic litigation and policy advocacy on issues of national consequence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Practice Areas ============ -->
+  <section class="practice" id="practice" aria-labelledby="practice-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Practice Areas</span>
+        <h2 id="practice-title">Where we work — and how we work for you.</h2>
+        <p class="lead">
+          Five interlocking practice areas combine private legal counsel
+          with public-interest depth. Each is led by advocates with
+          courtroom experience and sector specialism.
+        </p>
+      </div>
+
+      <div class="practice-grid">
+        <article class="practice-card reveal">
+          <span class="icon" aria-hidden="true">
+            <!-- gavel icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 4l6 6"/><path d="M11 7l6 6"/><path d="M16 9l-9 9-3-3 9-9"/><path d="M3 21h12"/>
+            </svg>
+          </span>
+          <h3>Legal Services</h3>
+          <p>Litigation, dispute resolution, commercial advisory, conveyancing, employment, family, and probate practice — the full mandate of a modern Kenyan firm.</p>
+          <ul>
+            <li>Civil &amp; Commercial Litigation</li>
+            <li>Corporate &amp; Commercial</li>
+            <li>Employment &amp; Labour</li>
+            <li>Conveyancing</li>
+          </ul>
+        </article>
+
+        <article class="practice-card reveal" data-delay="1">
+          <span class="icon" aria-hidden="true">
+            <!-- shield/lock icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/>
+              <rect x="9" y="11" width="6" height="5" rx="1"/>
+              <path d="M10.5 11V9.5a1.5 1.5 0 0 1 3 0V11"/>
+            </svg>
+          </span>
+          <h3>Data Protection</h3>
+          <p>Compliance counsel under Kenya&rsquo;s Data Protection Act, 2019 and cross-border alignment with the EU GDPR — registration, audits, DPIAs, and breach response.</p>
+          <ul>
+            <li>Kenya DPA Compliance</li>
+            <li>GDPR Alignment</li>
+            <li>DPIAs &amp; Audits</li>
+            <li>Breach Response</li>
+          </ul>
+        </article>
+
+        <article class="practice-card reveal" data-delay="2">
+          <span class="icon" aria-hidden="true">
+            <!-- people / rights icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="3"/>
+              <circle cx="17" cy="9" r="2.5"/>
+              <path d="M3 19c0-3 3-5 6-5s6 2 6 5"/>
+              <path d="M14.5 18.5c.4-2 2-3.5 4-3.5s2.5 1 2.5 3"/>
+            </svg>
+          </span>
+          <h3>Human Rights</h3>
+          <p>Constitutional petitions, public-interest litigation, and rights-based advocacy under the Bill of Rights — with special focus on marginalised and at-risk groups.</p>
+          <ul>
+            <li>Bill of Rights Petitions</li>
+            <li>Strategic Litigation</li>
+            <li>Women &amp; Children</li>
+            <li>Detainee Welfare</li>
+          </ul>
+        </article>
+
+        <article class="practice-card reveal" data-delay="3">
+          <span class="icon" aria-hidden="true">
+            <!-- handshake icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 13l3-3 3 1 4-4 5 3 3-1v6l-3 1-5 3-4-2-3 1z"/>
+              <path d="M9 11l3 3"/>
+            </svg>
+          </span>
+          <h3>NGO Support</h3>
+          <p>End-to-end legal infrastructure for non-profits: registration, board governance, grant compliance, tax exemptions, and the PBO Act regime.</p>
+          <ul>
+            <li>NGO/PBO Registration</li>
+            <li>Governance &amp; Boards</li>
+            <li>Grant Compliance</li>
+            <li>Tax &amp; Reporting</li>
+          </ul>
+        </article>
+
+        <article class="practice-card reveal" data-delay="4">
+          <span class="icon" aria-hidden="true">
+            <!-- book / education icon -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2V5z"/>
+              <path d="M4 19a2 2 0 0 0 2 2h12"/>
+              <path d="M8 7h7M8 11h5"/>
+            </svg>
+          </span>
+          <h3>Civic Education</h3>
+          <p>Community trainings, school programmes, and county forums that build constitutional literacy, electoral awareness, and active citizenship.</p>
+          <ul>
+            <li>Constitution 2010</li>
+            <li>Devolution &amp; Counties</li>
+            <li>Electoral Rights</li>
+            <li>Youth Programmes</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Services ============ -->
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Services</span>
+        <h2 id="services-title">Counsel that meets the standard of the moment.</h2>
+        <p class="lead">
+          Each engagement begins with a careful brief and ends with a
+          clear path to action. Whether you need a single opinion or
+          a sustained partnership, our advocates work with discretion,
+          discipline, and depth.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card reveal">
+          <span class="ico" aria-hidden="true">
+            <!-- scales -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v18"/><path d="M5 21h14"/>
+              <path d="M5 8h14"/>
+              <path d="M5 8l-3 6a3 3 0 0 0 6 0z"/>
+              <path d="M19 8l-3 6a3 3 0 0 0 6 0z"/>
+            </svg>
+          </span>
+          <h3>Litigation &amp; Dispute Resolution</h3>
+          <p>Representation across Kenyan courts and tribunals, from commercial disputes to constitutional petitions. We pair courtroom advocacy with arbitration and mediation strategy.</p>
+          <span class="more">Commercial · Civil · Constitutional <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="service-card reveal" data-delay="1">
+          <span class="ico" aria-hidden="true">
+            <!-- briefcase -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="7" width="18" height="13" rx="2"/>
+              <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+              <path d="M3 13h18"/>
+            </svg>
+          </span>
+          <h3>Corporate &amp; Commercial</h3>
+          <p>Company incorporation, shareholder agreements, M&amp;A advisory, contract drafting, and regulatory compliance. We help businesses move quickly without taking on hidden legal risk.</p>
+          <span class="more">Corporate · M&amp;A · Compliance <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="service-card reveal" data-delay="2">
+          <span class="ico" aria-hidden="true">
+            <!-- shield with check -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-3z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </span>
+          <h3>Data Protection &amp; Privacy</h3>
+          <p>Operational compliance with Kenya&rsquo;s Data Protection Act, 2019 and the GDPR. We draft privacy policies, run DPIAs, handle ODPC registrations, and lead breach response.</p>
+          <span class="more">DPA · GDPR · DPIA <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="service-card reveal" data-delay="3">
+          <span class="ico" aria-hidden="true">
+            <!-- megaphone -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6l-5 4H4a1 1 0 0 0-1 1z"/>
+              <path d="M14 8a4 4 0 0 1 0 8"/>
+              <path d="M17 5a8 8 0 0 1 0 14"/>
+            </svg>
+          </span>
+          <h3>Public-Interest Advocacy</h3>
+          <p>Strategic litigation, amicus briefs, and policy submissions on questions of national consequence. We work with civil society, faith groups, and community organisations.</p>
+          <span class="more">Strategic Litigation · Amicus · Policy <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="service-card reveal" data-delay="4">
+          <span class="ico" aria-hidden="true">
+            <!-- people -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3.5"/>
+              <path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6"/>
+            </svg>
+          </span>
+          <h3>NGO &amp; PBO Support</h3>
+          <p>From registration under the NGO Co-ordination Act or PBO Act to grant compliance, board governance, and tax exemption — we keep your mission funded and lawful.</p>
+          <span class="more">Registration · Governance · Compliance <span aria-hidden="true">→</span></span>
+        </article>
+
+        <article class="service-card reveal" data-delay="4">
+          <span class="ico" aria-hidden="true">
+            <!-- book / education -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 5a2 2 0 0 1 2-2h6v18H5a2 2 0 0 1-2-2z"/>
+              <path d="M21 5a2 2 0 0 0-2-2h-6v18h6a2 2 0 0 0 2-2z"/>
+            </svg>
+          </span>
+          <h3>Civic Education Programmes</h3>
+          <p>Community workshops, county-level civic forums, paralegal training, and school engagement on the Constitution, devolution, and electoral rights — delivered by qualified advocates.</p>
+          <span class="more">Workshops · Forums · Paralegals <span aria-hidden="true">→</span></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Team ============ -->
+  <section class="team" id="team" aria-labelledby="team-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Advocates</span>
+        <h2 id="team-title">A practice of advocates, not personalities.</h2>
+        <p class="lead">
+          Our team brings together courtroom experience, sector
+          specialism, and a shared commitment to public-spirited
+          lawyering. Detailed profiles are published as our advocates
+          join the practice.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <div class="team-photo" aria-hidden="true">
+            <span class="team-monogram">MA</span>
+          </div>
+          <div class="team-info">
+            <h3>Managing Advocate</h3>
+            <p class="team-role">Partner · Litigation</p>
+            <p class="team-bio">Leads the litigation desk, with practice across commercial, employment, and constitutional matters before Kenyan courts.</p>
+          </div>
+        </article>
+
+        <article class="team-card reveal" data-delay="1">
+          <div class="team-photo" aria-hidden="true">
+            <span class="team-monogram">DP</span>
+          </div>
+          <div class="team-info">
+            <h3>Senior Associate</h3>
+            <p class="team-role">Data Protection · GDPR</p>
+            <p class="team-bio">Heads the data-protection practice, advising controllers and processors on Kenya&rsquo;s DPA and EU GDPR alignment.</p>
+          </div>
+        </article>
+
+        <article class="team-card reveal" data-delay="2">
+          <div class="team-photo" aria-hidden="true">
+            <span class="team-monogram">HR</span>
+          </div>
+          <div class="team-info">
+            <h3>Counsel</h3>
+            <p class="team-role">Human Rights · Public Interest</p>
+            <p class="team-bio">Runs constitutional petitions and rights-based litigation in cooperation with NGO and community-based partners.</p>
+          </div>
+        </article>
+
+        <article class="team-card reveal" data-delay="3">
+          <div class="team-photo" aria-hidden="true">
+            <span class="team-monogram">CE</span>
+          </div>
+          <div class="team-info">
+            <h3>Programmes Lead</h3>
+            <p class="team-role">Civic Education · NGO</p>
+            <p class="team-bio">Designs and delivers civic-education programmes across counties, including paralegal training and youth forums.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="team-note">Full advocate biographies, qualifications, and practising certificates are available on request.</p>
+    </div>
+  </section>
+
+  <!-- ============ Contact ============ -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2 id="contact-title">Speak with our advocates.</h2>
+        <p class="lead">
+          Tell us briefly what you&rsquo;re facing. We&rsquo;ll route your
+          enquiry to the right desk and respond within two business days.
+          All consultations are confidential.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <aside class="contact-card reveal">
+          <span class="eyebrow">Office &amp; Channels</span>
+          <h3>Mafrick Chambers, Nairobi</h3>
+          <ul class="contact-list">
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s-7-7.5-7-13a7 7 0 1 1 14 0c0 5.5-7 13-7 13z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </span>
+              <span>
+                <span class="lbl">Address</span>
+                <span class="val">Mafrick Chambers, Lenana Road<br/>Nairobi, Kenya</span>
+              </span>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="M3 7l9 7 9-7"/>
+                </svg>
+              </span>
+              <span>
+                <span class="lbl">Email</span>
+                <span class="val"><a href="mailto:contact@mafrick-advocates.co.ke">contact@mafrick-advocates.co.ke</a></span>
+              </span>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92V21a1 1 0 0 1-1.08 1A19 19 0 0 1 2 4.08 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75l1 4a1 1 0 0 1-.27 1L7 10.5a16 16 0 0 0 6.5 6.5l1.75-1.83a1 1 0 0 1 1-.27l4 1a1 1 0 0 1 .75 1z"/>
+                </svg>
+              </span>
+              <span>
+                <span class="lbl">Telephone</span>
+                <span class="val"><a href="tel:+254700000000">+254 (0) 700 000 000</a></span>
+              </span>
+            </li>
+            <li>
+              <span class="ico" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 7v5l3 2"/>
+                </svg>
+              </span>
+              <span>
+                <span class="lbl">Hours</span>
+                <span class="val">Mon &ndash; Fri · 08:30 &ndash; 17:30 EAT</span>
+              </span>
+            </li>
+          </ul>
+          <p class="contact-hours">
+            Walk-in consultations are by appointment. For urgent rights matters
+            outside business hours, please flag <em>URGENT</em> in your message.
+          </p>
+        </aside>
+
+        <form class="form-card reveal" data-delay="1" id="contactForm" novalidate aria-labelledby="form-title">
+          <h3 id="form-title" style="margin-bottom:.25rem;">Send an enquiry</h3>
+          <p style="color:var(--ink-muted); margin-top:0; margin-bottom:1.5rem;">All fields marked * are required.</p>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Full Name *</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="f-email">Email *</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+254 …" />
+            </div>
+            <div class="field">
+              <label for="f-area">Practice Area *</label>
+              <select id="f-area" name="area" required>
+                <option value="" selected>Select an area…</option>
+                <option>Legal Services</option>
+                <option>Data Protection (DPA / GDPR)</option>
+                <option>Human Rights</option>
+                <option>NGO Support</option>
+                <option>Civic Education</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="f-message">How can we help? *</label>
+              <textarea id="f-message" name="message" rows="5" required placeholder="Please describe your matter briefly. Avoid sharing confidential details until we confirm engagement."></textarea>
+              <span class="hint">We treat every enquiry as confidential. Submitting this form does not, by itself, create an advocate–client relationship.</span>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <button class="btn btn-outline" type="submit">Send Enquiry <span class="arrow" aria-hidden="true">→</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer" aria-labelledby="footer-title">
+  <h2 id="footer-title" class="visually-hidden" style="position:absolute;left:-9999px;">Site footer</h2>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Mafrick & Company Advocates — home">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="60" height="60" rx="10" fill="#11192c" stroke="rgba(201,162,39,.45)" stroke-width="1"/>
+            <path d="M14 46V20" stroke="#c9a227" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <path d="M50 46V20" stroke="#c9a227" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+            <path d="M14 20 L32 40 L50 20" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+            <path d="M10 50 H54" stroke="#c9a227" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="32" cy="55" r="2" fill="#c9a227"/>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-name">Mafrick &amp; Company</span>
+            <span class="brand-tag">Advocates</span>
+          </span>
+        </a>
+        <p>A Kenyan law firm and civic-minded NGO — advancing justice, integrity, and excellence in legal practice and public life.</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="#practice">Legal Services</a></li>
+          <li><a href="#practice">Data Protection</a></li>
+          <li><a href="#practice">Human Rights</a></li>
+          <li><a href="#practice">NGO Support</a></li>
+          <li><a href="#practice">Civic Education</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Firm</h5>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Reach Us</h5>
+        <ul>
+          <li><a href="mailto:contact@mafrick-advocates.co.ke">contact@mafrick-advocates.co.ke</a></li>
+          <li><a href="tel:+254700000000">+254 (0) 700 000 000</a></li>
+          <li>Mafrick Chambers, Lenana Road, Nairobi</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Mafrick &amp; Company Advocates. All rights reserved.</span>
+      <span class="partner-credit">
+        <span class="dot" aria-hidden="true"></span>
+        Technology partner · <strong>ELB Consulting</strong>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---------- Mobile nav ----------
+  var toggle = document.getElementById('navToggle');
+  var links  = document.getElementById('navLinks');
+  var header = document.getElementById('siteHeader');
+
+  function setMenu(open) {
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    links.classList.toggle('is-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  toggle.addEventListener('click', function () {
+    var open = toggle.getAttribute('aria-expanded') !== 'true';
+    setMenu(open);
+  });
+
+  links.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (a) setMenu(false);
+  });
+
+  // Close menu on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && links.classList.contains('is-open')) setMenu(false);
+  });
+
+  // Close menu when resizing back to desktop
+  var mq = window.matchMedia('(min-width: 961px)');
+  (mq.addEventListener ? mq.addEventListener.bind(mq, 'change')
+                       : mq.addListener.bind(mq))(function (e) {
+    if (e.matches) setMenu(false);
+  });
+
+  // ---------- Sticky header shadow on scroll ----------
+  function onScroll() {
+    if (window.scrollY > 8) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ---------- Active link highlight ----------
+  var navAnchors = links.querySelectorAll('a[href^="#"]');
+  var sections = Array.prototype.map.call(navAnchors, function (a) {
+    var id = a.getAttribute('href').slice(1);
+    return id ? document.getElementById(id) : null;
+  });
+
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var id = entry.target.id;
+        navAnchors.forEach(function (a) {
+          a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (s) { if (s) spy.observe(s); });
+  }
+
+  // ---------- Reveal on scroll ----------
+  var reveals = document.querySelectorAll('.reveal');
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced || !('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+    // Safety net: reveal anything still hidden after 2.5s (covers print, automation, no-scroll viewports)
+    setTimeout(function () {
+      reveals.forEach(function (el) {
+        if (!el.classList.contains('is-visible')) el.classList.add('is-visible');
+      });
+    }, 2500);
+  }
+
+  // ---------- Footer year ----------
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  // ---------- Contact form (UI only) ----------
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.classList.remove('is-success', 'is-error');
+
+      var name = form.elements['name'].value.trim();
+      var email = form.elements['email'].value.trim();
+      var area = form.elements['area'].value;
+      var msg = form.elements['message'].value.trim();
+
+      var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      if (!name || !email || !area || !msg) {
+        status.textContent = 'Please complete the required fields.';
+        status.classList.add('is-error');
+        return;
+      }
+      if (!emailOk) {
+        status.textContent = 'Please enter a valid email address.';
+        status.classList.add('is-error');
+        return;
+      }
+
+      // UI-only acknowledgement — no submission endpoint wired by design.
+      status.textContent = 'Thank you. Your enquiry has been received — we will respond within two business days.';
+      status.classList.add('is-success');
+      form.reset();
+    });
+  }
+})();
+</script>
+</body>
+</html>
