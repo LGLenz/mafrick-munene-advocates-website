@@ -579,6 +579,32 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   border-top: 1px solid rgba(255,255,255,.12);
   font-size: .9rem; color: rgba(255,255,255,.78);
 }
+.payment-placeholder {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(201,162,39,.28);
+  background: rgba(255,255,255,.06);
+  position: relative;
+  z-index: 1;
+}
+.payment-placeholder .lbl {
+  display: block;
+  margin-bottom: .35rem;
+}
+.payment-placeholder strong {
+  display: block;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  line-height: 1.2;
+  margin-bottom: .45rem;
+}
+.payment-placeholder p {
+  margin: 0;
+  color: rgba(255,255,255,.78);
+  font-size: .92rem;
+}
 
 /* Form */
 .form-card {
@@ -1239,6 +1265,14 @@ p  { margin: 0 0 1rem; color: var(--ink); }
             Walk-in consultations are by appointment. For urgent rights matters
             outside business hours, please flag <em>URGENT</em> in your message.
           </p>
+          <div class="payment-placeholder" aria-labelledby="payment-title">
+            <span class="lbl">Payments</span>
+            <strong id="payment-title">Contact us for payment details</strong>
+            <p>
+              Consultation, filing, and programme-support payments are confirmed
+              directly by the firm before any transfer is made.
+            </p>
+          </div>
         </aside>
 
         <form class="form-card reveal" data-delay="1" id="contactForm" novalidate aria-labelledby="form-title">
