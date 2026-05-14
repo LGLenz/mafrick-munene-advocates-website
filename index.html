@@ -7,14 +7,14 @@
 <meta name="description" content="Mafrick &amp; Company Advocates is a Kenya-based law firm and NGO offering legal services, data protection counsel (Kenya DPA/GDPR), human rights advocacy, NGO support, and civic education." />
 <meta name="theme-color" content="#1a2744" />
 <meta name="robots" content="index,follow" />
-<link rel="canonical" href="https://mafrick-advocates.co.ke/" />
+<link rel="canonical" href="https://mafrick.elbconsultingtech.com/" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Mafrick &amp; Company Advocates" />
 <meta property="og:title" content="Mafrick &amp; Company Advocates — Justice. Integrity. Excellence." />
 <meta property="og:description" content="Kenya-based law firm and NGO. Legal services, data protection, human rights, NGO support, and civic education." />
-<meta property="og:url" content="https://mafrick-advocates.co.ke/" />
+<meta property="og:url" content="https://mafrick.elbconsultingtech.com/" />
 <meta property="og:locale" content="en_KE" />
 
 <!-- Twitter -->
@@ -33,8 +33,8 @@
   "name": "Mafrick & Company Advocates",
   "description": "Kenya-based law firm and NGO offering legal services, data protection counsel, human rights advocacy, NGO support, and civic education.",
   "areaServed": "KE",
-  "email": "contact@mafrick-advocates.co.ke",
-  "telephone": "+254 (0) 700 000 000",
+  "email": ["mafrickmunene@gmail.com", "mafrick.munene@braeburn.ac.ke"],
+  "telephone": "+254 730 881 000",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Mafrick Chambers, Lenana Road",
@@ -54,6 +54,10 @@
    Mafrick & Company Advocates — single-file production site
    Deep navy #1a2744, gold/amber #c9a227, clean white
    Type: Playfair Display (display) + Inter (body)
+   Workflow note: all outgoing emails related to this site, including invoices,
+   billing, client communications, and notifications, must first be saved as a
+   Gmail draft in elenz@elbconsultingtech.com for Elias Lenz to review and
+   approve. Never auto-send without prior draft approval.
    ===================================================================== */
 
 :root {
@@ -579,31 +583,56 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   border-top: 1px solid rgba(255,255,255,.12);
   font-size: .9rem; color: rgba(255,255,255,.78);
 }
-.payment-placeholder {
+.payment-panel {
   margin-top: 1.5rem;
-  padding: 1.2rem;
+  padding: 1.25rem;
   border-radius: var(--r-md);
-  border: 1px solid rgba(201,162,39,.28);
-  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(0,165,80,.32);
+  background:
+    linear-gradient(135deg, rgba(0,165,80,.18), rgba(255,255,255,.06)),
+    rgba(255,255,255,.06);
   position: relative;
   z-index: 1;
 }
-.payment-placeholder .lbl {
-  display: block;
+.payment-panel .lbl {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  background: #00A550;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
   margin-bottom: .35rem;
 }
-.payment-placeholder strong {
+.payment-panel strong {
   display: block;
   color: #fff;
   font-family: var(--font-display);
-  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  font-size: clamp(1.45rem, 3vw, 2rem);
   line-height: 1.2;
   margin-bottom: .45rem;
 }
-.payment-placeholder p {
+.payment-panel p {
   margin: 0;
   color: rgba(255,255,255,.78);
   font-size: .92rem;
+}
+.btn-mpesa {
+  margin-top: 1rem;
+  background: #00A550;
+  color: #fff;
+  border-color: #00A550;
+  box-shadow: 0 16px 28px rgba(0,165,80,.22);
+}
+.btn-mpesa:hover {
+  background: #008a43;
+  border-color: #008a43;
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 /* Form */
@@ -708,6 +737,36 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   background: var(--gold); display: inline-block;
 }
 .partner-credit strong { color: #fff; font-weight: 600; letter-spacing: .02em; }
+
+.whatsapp-fab {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #25D366;
+  color: #fff;
+  box-shadow: 0 18px 36px rgba(37,211,102,.3);
+  z-index: 120;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+}
+.whatsapp-fab:hover {
+  background: #1fb957;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 22px 42px rgba(37,211,102,.38);
+}
+.whatsapp-fab:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+.whatsapp-fab svg {
+  width: 30px;
+  height: 30px;
+}
 
 /* ============ Reveal animations ============ */
 .reveal {
@@ -1234,7 +1293,10 @@ p  { margin: 0 0 1rem; color: var(--ink); }
               </span>
               <span>
                 <span class="lbl">Email</span>
-                <span class="val"><a href="mailto:contact@mafrick-advocates.co.ke">contact@mafrick-advocates.co.ke</a></span>
+                <span class="val">
+                  <a href="mailto:mafrickmunene@gmail.com">mafrickmunene@gmail.com</a><br/>
+                  <a href="mailto:mafrick.munene@braeburn.ac.ke">mafrick.munene@braeburn.ac.ke</a>
+                </span>
               </span>
             </li>
             <li>
@@ -1244,8 +1306,11 @@ p  { margin: 0 0 1rem; color: var(--ink); }
                 </svg>
               </span>
               <span>
-                <span class="lbl">Telephone</span>
-                <span class="val"><a href="tel:+254700000000">+254 (0) 700 000 000</a></span>
+                <span class="lbl">Telephone &amp; WhatsApp</span>
+                <span class="val">
+                  Call: <a href="tel:+254730881000">+254 730 881 000</a><br/>
+                  WhatsApp: <a href="https://wa.me/254730881000" target="_blank" rel="noopener">+254 730 881 000</a>
+                </span>
               </span>
             </li>
             <li>
@@ -1265,13 +1330,16 @@ p  { margin: 0 0 1rem; color: var(--ink); }
             Walk-in consultations are by appointment. For urgent rights matters
             outside business hours, please flag <em>URGENT</em> in your message.
           </p>
-          <div class="payment-placeholder" aria-labelledby="payment-title">
-            <span class="lbl">Payments</span>
-            <strong id="payment-title">Contact us for payment details</strong>
+          <div class="payment-panel" aria-labelledby="payment-title">
+            <span class="lbl">M-Pesa</span>
+            <strong id="payment-title">0720 178 970</strong>
             <p>
-              Consultation, filing, and programme-support payments are confirmed
-              directly by the firm before any transfer is made.
+              Send payment to <strong>0720 178 970</strong> (Mafrick Munene) then
+              send confirmation via WhatsApp.
             </p>
+            <a class="btn btn-mpesa" href="tel:+254720178970" aria-label="Pay Mafrick Munene via M-Pesa at 0720 178 970">
+              Pay via M-Pesa <span class="arrow" aria-hidden="true">→</span>
+            </a>
           </div>
         </aside>
 
@@ -1368,8 +1436,10 @@ p  { margin: 0 0 1rem; color: var(--ink); }
       <div class="footer-col">
         <h5>Reach Us</h5>
         <ul>
-          <li><a href="mailto:contact@mafrick-advocates.co.ke">contact@mafrick-advocates.co.ke</a></li>
-          <li><a href="tel:+254700000000">+254 (0) 700 000 000</a></li>
+          <li><a href="mailto:mafrickmunene@gmail.com">mafrickmunene@gmail.com</a></li>
+          <li><a href="mailto:mafrick.munene@braeburn.ac.ke">mafrick.munene@braeburn.ac.ke</a></li>
+          <li><a href="tel:+254730881000">+254 730 881 000</a></li>
+          <li>M-Pesa: <a href="tel:+254720178970">0720 178 970</a></li>
           <li>Mafrick Chambers, Lenana Road, Nairobi</li>
         </ul>
       </div>
@@ -1384,6 +1454,18 @@ p  { margin: 0 0 1rem; color: var(--ink); }
     </div>
   </div>
 </footer>
+
+<a
+  class="whatsapp-fab"
+  href="https://wa.me/254730881000"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with Mafrick & Company Advocates on WhatsApp"
+>
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.1 1.5h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4A9.6 9.6 0 0 1 6.4 15c0-5.3 4.3-9.6 9.6-9.6S25.6 9.7 25.6 15s-4.3 9.7-9.6 9.7zm5.4-7.1c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4a8.7 8.7 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.2-.4c.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.2 5.2 4.5 2.5 1 3 .8 3.5.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+  </svg>
+</a>
 
 <script>
 (function () {
