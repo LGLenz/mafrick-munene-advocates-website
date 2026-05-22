@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# Local logs / placeholders
+logs/
+.placeholder/

@@ -64,6 +64,62 @@ The project is part of the **Partnership Proposal: Mafrick & Company Advocates &
 | Website Development | Pending |
 | Go-Live | Pending |
 
+## CI/CD — Operating Model
+
+Governance lives in GitHub Actions, branch protection, and environment
+approvals — not in assistant memory. See
+[`docs/Operating-Model.md`](docs/Operating-Model.md) for the full picture.
+
+Flow:
+
+1. **Copilot/assistant drafts** changes on a feature branch and opens a PR.
+2. **PR mandatory checks** run automatically (`.github/workflows/pr-checks.yml`):
+   install/tooling validation, build/artifact validation, lint, link/site
+   sanity, and no-secrets/config sanity. Branch protection should mark
+   these jobs as required for merging to `main`.
+3. **Production deployment** (`.github/workflows/deploy-pages.yml`) runs on
+   `push:main` and on `workflow_dispatch`, targets the `production`
+   GitHub environment (which can require human approval), and records a
+   GitHub deployment status for every run.
+4. **Post-deploy smoke tests** (`.github/workflows/site-health.yml`) verify
+   DNS, TLS, HTTP status, and page title for the GitHub Pages default URL
+   and the custom domain. Runs after every deploy, on a 6-hour schedule,
+   and on demand. Failures open a tracking issue.
+5. **DNS as code**: expected records live in `dns/records.yaml`
+   (machine-readable, consumed by `scripts/check_dns.py`). The
+   site-health workflow diffs expected vs live records.
+
+### DNS
+
+Custom domain: `mafrick.elbconsultingtech.com` (CNAME →
+`lglenz.github.io.`). The parent zone `elbconsultingtech.com` is
+managed under ELB Consulting Tech outside this repository. Both DNS
+propagation and the GitHub-issued TLS certificate may take time after
+the CNAME is added; the `site-health` workflow treats failures on the
+custom domain as **warn-only** until the host is verified live. Once
+end-to-end is confirmed, flip the `custom-domain` target in
+`site-health.yml` to `required: "true"`.
+
+### Repository structure
+
+```
+.
+├── index.html              # Single-page site
+├── CNAME                   # GitHub Pages custom domain
+├── dns/
+│   └── records.yaml        # DNS source of truth (CNAME expectation)
+├── scripts/
+│   ├── check_dns.py        # Diff dns/records.yaml against live DNS
+│   └── site_health.sh      # DNS/TLS/HTTP/title smoke probe
+├── docs/
+│   └── Operating-Model.md  # CI/CD + deployment governance
+└── .github/
+    └── workflows/
+        ├── pr-checks.yml      # Mandatory checks for PRs/pushes
+        ├── deploy-pages.yml   # Production GitHub Pages deploy
+        └── site-health.yml    # Post-deploy + scheduled smoke tests
+```
+
 ## Related Projects
 
 - [kuna-beauty-salon-website](https://github.com/LGLenz/kuna-beauty-salon-website) — Digital branding for partner beauty salon
