@@ -88,7 +88,7 @@ jobs:
       - name: Confirm CNAME matches expected custom domain
         run: |
           set -euo pipefail
-          expected="mafrick-munene-advocates.bridgeaxis-consulting.de"
+          expected="mafrick-munene-advocates.com"
           actual="$(tr -d '[:space:]' < CNAME)"
           if [ "$actual" != "$expected" ]; then
             echo "::error file=CNAME::CNAME contents '$actual' do not match expected custom domain '$expected'"
@@ -223,10 +223,10 @@ jobs:
           while IFS= read -r url; do
             [ -z "$url" ] && continue
             case "$url" in
-              https://mafrick-munene-advocates.bridgeaxis-consulting.de*) ;;
+              https://mafrick-munene-advocates.com*) ;;
               *) continue ;;
             esac
-            path="${url#https://mafrick-munene-advocates.bridgeaxis-consulting.de/}"
+            path="${url#https://mafrick-munene-advocates.com/}"
             [ -z "$path" ] && path="index.html"
             case "$path" in
               */) path="${path}index.html" ;;
