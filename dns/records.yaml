@@ -1,7 +1,7 @@
 # DNS source of truth for Mafrick & Company Advocates website
 #
 # This file is the canonical expectation for what DNS should look like for
-# the custom domain mafrick.elbconsultingtech.com. It is consumed by
+# the custom domain mafrick.bridgeaxis-consulting.de. It is consumed by
 # scripts/check_dns.py from the site-health workflow to compare expected
 # vs live records.
 #
@@ -15,7 +15,7 @@
 # warning (warn-only) rather than a blocking failure until the host
 # is verified working end-to-end.
 
-domain: mafrick.elbconsultingtech.com
+domain: mafrick.bridgeaxis-consulting.de
 
 records:
   # The custom domain should be a CNAME to the GitHub Pages user-site host
@@ -27,7 +27,7 @@ records:
     expected:
       - lglenz.github.io.
     notes: >
-      mafrick.elbconsultingtech.com → lglenz.github.io. (GitHub Pages).
+      mafrick.bridgeaxis-consulting.de → lglenz.github.io. (GitHub Pages).
       If/when the apex of elbconsultingtech.com is migrated, this CNAME
       may need to change; until then this is the canonical expectation.
 

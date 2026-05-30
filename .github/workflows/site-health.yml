@@ -9,7 +9,7 @@ name: Site Health (Post-deploy + Scheduled)
 #
 # Targets:
 #   - https://lglenz.github.io/mafrick-munene-advocates-website/ (Pages default URL — warn-only)
-#   - https://mafrick.elbconsultingtech.com (custom domain — warn-only until DNS/TLS fixed)
+#   - https://mafrick.bridgeaxis-consulting.de (custom domain — warn-only until DNS/TLS fixed)
 #
 # This workflow uses NO secrets and is read-only.
 
@@ -64,7 +64,7 @@ jobs:
       - name: Warn (non-blocking) if DNS check reported drift
         if: steps.dns.outputs.exit_code != '0'
         run: |
-          # DNS for mafrick.elbconsultingtech.com is currently being set up.
+          # DNS for mafrick.bridgeaxis-consulting.de is currently being set up.
           # We surface drift as a warning rather than failing the job until
           # the CNAME / TLS provisioning is confirmed live.
           echo "::warning::DNS drift detected (warn-only while custom-domain DNS/TLS is being provisioned — see job summary)"
@@ -79,7 +79,7 @@ jobs:
           - url: "https://lglenz.github.io/mafrick-munene-advocates-website/"
             label: "pages-default"
             required: "false"
-          - url: "https://mafrick.elbconsultingtech.com"
+          - url: "https://mafrick.bridgeaxis-consulting.de"
             label: "custom-domain"
             required: "false"
     steps:

@@ -91,7 +91,7 @@ Flow:
 
 ### DNS
 
-Custom domain: `mafrick.elbconsultingtech.com` (CNAME →
+Custom domain: `mafrick.bridgeaxis-consulting.de` (CNAME →
 `lglenz.github.io.`). The parent zone `elbconsultingtech.com` is
 managed under ELB Consulting Tech outside this repository. Both DNS
 propagation and the GitHub-issued TLS certificate may take time after
