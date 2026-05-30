@@ -737,6 +737,25 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   background: var(--gold); display: inline-block;
 }
 .partner-credit strong { color: #fff; font-weight: 600; letter-spacing: .02em; }
+.partner-credit a:hover strong { color: var(--gold); }
+
+.footer-builtby {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 1.4rem;
+  margin-top: .4rem;
+  font-size: .9rem;
+  color: rgba(255,255,255,.6);
+  line-height: 1.6;
+}
+.footer-builtby a { color: rgba(255,255,255,.78); }
+.footer-builtby a:hover strong, .footer-builtby a:hover { color: var(--gold); }
+.footer-builtby strong { color: #fff; font-weight: 600; }
+.builtby-cta {
+  display: inline-block; margin-left: .15rem;
+  color: var(--gold) !important; font-weight: 600;
+  white-space: nowrap;
+}
+.builtby-cta:hover { text-decoration: underline; }
 
 .whatsapp-fab {
   position: fixed;
@@ -1445,11 +1464,21 @@ p  { margin: 0 0 1rem; color: var(--ink); }
       </div>
     </div>
 
+    <div class="footer-builtby">
+      <span>
+        Website built by
+        <a href="https://eliaslenz-mbaberatung.de/#contact" target="_blank" rel="noopener"><strong>ELB Consulting</strong></a>
+        — IT security, AI governance &amp; digital consulting.
+        <a class="builtby-cta" href="https://eliaslenz-mbaberatung.de/#contact" target="_blank" rel="noopener">Book a consultation →</a>
+      </span>
+    </div>
+
     <div class="footer-bottom">
       <span>&copy; <span id="year"></span> Mafrick &amp; Company Advocates. All rights reserved.</span>
       <span class="partner-credit">
         <span class="dot" aria-hidden="true"></span>
-        Technology partner · <strong>ELB Consulting</strong>
+        Technology partner ·
+        <a href="https://eliaslenz-mbaberatung.de/#contact" target="_blank" rel="noopener"><strong>ELB Consulting</strong></a>
       </span>
     </div>
   </div>
