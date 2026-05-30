@@ -723,8 +723,15 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 1rem;
   padding-top: 1.5rem;
+  /* Keep the right-side credit clear of the floating WhatsApp button */
+  padding-bottom: 84px;
   font-size: .85rem;
   color: rgba(255,255,255,.55);
+}
+@media (min-width: 700px) {
+  .footer-bottom { padding-bottom: 1.5rem; }
+  /* Reserve room so the partner credit never sits under the FAB */
+  .footer-bottom .partner-credit { margin-right: 76px; }
 }
 .footer-bottom a { color: rgba(255,255,255,.7); }
 .footer-bottom a:hover { color: var(--gold); }
