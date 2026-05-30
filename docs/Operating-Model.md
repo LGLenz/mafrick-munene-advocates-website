@@ -3,7 +3,7 @@
 This document is the single source of truth for how changes flow from an
 assistant-drafted edit to a verified production deployment of the
 **Mafrick & Company Advocates** website
-(`mafrick.bridgeaxis-consulting.de`, served via GitHub Pages from
+(`mafrick-munene-advocates.bridgeaxis-consulting.de`, served via GitHub Pages from
 `LGLenz/mafrick-munene-advocates-website`).
 
 The intent is to move governance from "Copilot/assistant remembers to run
@@ -120,11 +120,11 @@ Targets:
 | Label          | URL                                                                | Required?       |
 |----------------|--------------------------------------------------------------------|-----------------|
 | pages-default  | https://lglenz.github.io/mafrick-munene-advocates-website/         | no (warn-only)  |
-| custom-domain  | https://mafrick.bridgeaxis-consulting.de                              | no (warn-only)  |
+| custom-domain  | https://mafrick-munene-advocates.bridgeaxis-consulting.de                              | no (warn-only)  |
 
 Both targets are **warn-only** at the moment because:
 
-- The custom domain `mafrick.bridgeaxis-consulting.de` is in the process of
+- The custom domain `mafrick-munene-advocates.bridgeaxis-consulting.de` is in the process of
   being provisioned. The CNAME may still be propagating and GitHub's
   TLS certificate issuance for the host can take 24h+ after the CNAME
   goes live.
@@ -140,14 +140,14 @@ When the scheduled run fails, an issue is opened with label `site-health`.
 
 ## 6. DNS source of truth
 
-Expected DNS for `mafrick.bridgeaxis-consulting.de` lives in
+Expected DNS for `mafrick-munene-advocates.bridgeaxis-consulting.de` lives in
 `dns/records.yaml`. The `dns-check` job in `site-health.yml` consumes
 this file and diffs it against live DNS via
 `scripts/check_dns.py`.
 
 Expected:
 
-- `mafrick.bridgeaxis-consulting.de` is a CNAME → `lglenz.github.io.`
+- `mafrick-munene-advocates.bridgeaxis-consulting.de` is a CNAME → `lglenz.github.io.`
   (project-Pages with a subdomain custom domain — see the GitHub
   Pages docs).
 
@@ -181,7 +181,7 @@ DNS + TLS are confirmed live.
 | Symptom                                          | Likely cause                                                       | Where to look |
 |--------------------------------------------------|--------------------------------------------------------------------|---------------|
 | Deployments tab is stale                         | A previous Pages workflow failed without recording a deployment.   | `deploy-pages.yml` run log + Settings → Environments → production. |
-| `mafrick.bridgeaxis-consulting.de` shows cert error | GitHub Pages certificate for the custom host still being issued.   | `site-health.yml` → `http-check` (custom-domain target, warn-only). |
+| `mafrick-munene-advocates.bridgeaxis-consulting.de` shows cert error | GitHub Pages certificate for the custom host still being issued.   | `site-health.yml` → `http-check` (custom-domain target, warn-only). |
 | `dns-check` job warns                            | Live DNS doesn't yet match `dns/records.yaml`.                     | Parent zone `elbconsultingtech.com` DNS console + `scripts/check_dns.py` output in job summary. |
 | PR check `No-secrets / config sanity` fails      | A secret-shaped string was committed.                              | Job log lists the file and pattern. |
 
@@ -215,6 +215,6 @@ GitHub UI by a repo admin:
    "GitHub Actions" so `deploy-pages.yml` is the source of truth
    (rather than the legacy branch-source build).
 4. **Custom domain DNS / TLS** — once
-   `mafrick.bridgeaxis-consulting.de` resolves and GitHub has issued a
+   `mafrick-munene-advocates.bridgeaxis-consulting.de` resolves and GitHub has issued a
    certificate, flip the `custom-domain` target in
    `site-health.yml` from `required: "false"` to `required: "true"`.
