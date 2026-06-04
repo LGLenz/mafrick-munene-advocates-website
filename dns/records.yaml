@@ -5,36 +5,32 @@
 # scripts/check_dns.py from the site-health workflow to compare expected
 # vs live records.
 #
-# The parent zone (elbconsultingtech.com) is managed under ELB Consulting
-# Tech and is the authoritative source for the CNAME. Keep this file in
-# sync with whatever record management lives in that zone.
+# The domain mafrick-munene-advocates.com is now configured to serve via
+# GitHub Pages (lglenz.github.io). DNS points to GitHub's servers via CNAME.
 #
-# Status: As of 2026-05-22 the custom domain is not yet fully live —
-# DNS propagation and GitHub Pages TLS issuance for the host may still
-# be in progress. The site-health workflow surfaces drift here as a
-# warning (warn-only) rather than a blocking failure until the host
-# is verified working end-to-end.
+# Status: As of 2026-06-04 the domain is being migrated to GitHub Pages.
+# DNS propagation and GitHub Pages TLS issuance for the host are in progress.
+# The site-health workflow surfaces drift as a warning (warn-only) until the
+# host is verified working end-to-end.
 
 domain: mafrick-munene-advocates.com
 
 records:
-  # The custom domain should be a CNAME to the GitHub Pages user-site host
-  # for owner LGLenz. GitHub's docs for project Pages with a *subdomain*
-  # custom domain require a CNAME → <user>.github.io.
-  # Source: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
+  # The custom domain should be a CNAME to GitHub Pages.
+  # GitHub's docs for project Pages with a subdomain custom domain:
+  # https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
   - name: "@"
     type: CNAME
     expected:
       - lglenz.github.io.
     notes: >
       mafrick-munene-advocates.com → lglenz.github.io. (GitHub Pages).
-      If/when the apex of elbconsultingtech.com is migrated, this CNAME
-      may need to change; until then this is the canonical expectation.
+      Update this in your Hetzner/Konsoleh DNS console.
 
 # How site-health uses this file:
 #   - For each record, look up the live value via `dig +short`.
 #   - For `expected`: live set must equal expected set (order-independent).
 #   - For `expected_contains`: at least one live value must contain each
 #     listed substring.
-#   - Drift is reported. While the custom domain is being provisioned,
-#     drift is warn-only (see site-health.yml).
+#   - Drift is reported. While DNS is being provisioned, drift is warn-only
+#     (see site-health.yml).
