@@ -1,0 +1,29 @@
+# GitHub Pages Jekyll configuration
+# This file enables GitHub Pages settings for the Mafrick & Company Advocates website
+
+# Site settings
+title: Mafrick & Company Advocates
+description: Kenya-based law firm and NGO offering legal services, data protection counsel, human rights advocacy, NGO support, and civic education.
+url: https://mafrick-munene-advocates.com
+baseurl: ""
+
+# Build settings
+theme: null
+markdown: kramdown
+plugins: []
+
+# Security: Force HTTPS redirect
+# GitHub Pages automatically serves HTTPS on all github.io domains
+# For custom domains, HTTPS certificate is provisioned automatically
+# and this repository has Enforce HTTPS enabled
+
+# Environment
+environment: production
+
+# Disable Jekyll processing (this is a static HTML site)
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - "*.md"
