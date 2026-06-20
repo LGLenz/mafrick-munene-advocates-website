@@ -12,7 +12,7 @@ branch protection, environments, and scheduled smoke tests**.
 
 This is the same governance model used across the LGLenz/ELB Consulting
 Tech first-wave repos (e.g.
-[`bridgeaxis-consulting` PR #23](https://github.com/LGLenz/bridgeaxis-consulting/pull/23)),
+[`kestura-consulting` PR #23](https://github.com/LGLenz/kestura-consulting/pull/23)),
 adapted to a single-page static site.
 
 ## 1. Flow at a glance
