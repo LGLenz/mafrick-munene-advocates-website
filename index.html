@@ -489,6 +489,13 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
+/* Balance the 4-card team grid: prefer 2 cols on tablet, 4 on wide desktop, never an orphan row */
+@media (min-width: 720px) and (max-width: 1199px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1200px) {
+  .team-grid { grid-template-columns: repeat(4, 1fr); }
+}
 .team-card {
   background: #fff; border: 1px solid var(--line);
   border-radius: var(--r-md); overflow: hidden;
@@ -1362,8 +1369,8 @@ p  { margin: 0 0 1rem; color: var(--ink); }
               Send payment to <strong>0720 178 970</strong> (Mafrick Munene) then
               send confirmation via WhatsApp.
             </p>
-            <a class="btn btn-mpesa" href="tel:+254720178970" aria-label="Pay Mafrick Munene via M-Pesa at 0720 178 970">
-              Pay via M-Pesa <span class="arrow" aria-hidden="true">→</span>
+            <a class="btn btn-mpesa" href="https://wa.me/254720178970?text=Hello%2C%20I%20have%20sent%20an%20M-Pesa%20payment%20to%200720%20178%20970%20(Mafrick%20Munene).%20Please%20confirm%20receipt." target="_blank" rel="noopener" aria-label="Confirm M-Pesa payment to Mafrick Munene via WhatsApp">
+              Confirm payment via WhatsApp <span class="arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </aside>
@@ -1474,7 +1481,7 @@ p  { margin: 0 0 1rem; color: var(--ink); }
         Website built by
         <a href="https://kestura.com" target="_blank" rel="noopener"><strong>Kestura UG (haftungsbeschränkt) i.G.</strong></a>
         — IT security, AI governance &amp; digital consulting.
-        <a class="builtby-cta" href="https://kestura.com" target="_blank" rel="noopener">Book a consultation →</a>
+        <a class="builtby-cta" href="#contact">Book a consultation →</a>
       </span>
     </div>
 
