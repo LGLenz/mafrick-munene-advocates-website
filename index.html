@@ -828,6 +828,137 @@ p  { margin: 0 0 1rem; color: var(--ink); }
   .site-header, .nav-toggle, .hero-cta, form, .site-footer { display: none !important; }
   body { color: #000; }
 }
+
+<!-- PHOTOS-2026-07-01 -->
+
+/* ============================================================
+   Photo integrations — added 2026-07-01
+   Approved photo pack: 6 editorial scene photos, face-free,
+   Nairobi-rooted. See docs/photo-audit-report.pdf for provenance.
+   ============================================================ */
+
+/* Hero background photo — sits above the base gradient but below
+   the grid-texture overlay, so the site identity is preserved. */
+.hero { position: relative; }
+.hero .hero-bg {
+  position: absolute; inset: 0; z-index: -1;   /* above ::before (-2) and ::after (-1 → we bump ::after to 0 below via mask) */
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero .hero-bg > picture,
+.hero .hero-bg > picture img {
+  width: 100%; height: 100%;
+  display: block;
+}
+.hero .hero-bg img {
+  object-fit: cover;
+  object-position: 50% 55%;
+  opacity: .55;                                 /* stronger, but tinted below */
+  filter: saturate(.85) contrast(1.02);
+  mix-blend-mode: luminosity;                   /* keeps navy identity */
+}
+/* Tinting gradient on top of the photo so text stays WCAG AA */
+.hero .hero-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(1000px 600px at 78% 20%, rgba(201,162,39,.10), transparent 65%),
+    linear-gradient(180deg,
+      rgba(17,25,44,.45) 0%,
+      rgba(26,39,68,.55) 55%,
+      rgba(17,25,44,.72) 100%);
+  pointer-events: none;
+}
+
+/* Reusable "scene banner" — restrained landscape belt between
+   the section head and the section body. Subtle, not a hero. */
+.scene-banner {
+  position: relative;
+  margin: clamp(1.5rem, 2.5vw, 2rem) 0 clamp(1.75rem, 3vw, 2.5rem);
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 32 / 9;                       /* short, wide belt */
+  max-height: 320px;
+  background: var(--navy-50);
+  box-shadow: 0 6px 22px rgba(17,25,44,.10);
+}
+.scene-banner img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.scene-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(17,25,44,0) 60%,
+    rgba(17,25,44,.18) 100%);
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .scene-banner { aspect-ratio: 3 / 2; border-radius: 10px; max-height: none; }
+}
+
+/* About-section reading-room accent — fills the left column of the
+   about-grid, sitting below the h2 + lead paragraph. */
+.about-figure-col {
+  position: relative;
+  margin: clamp(1.75rem, 3vw, 2.25rem) 0 0;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 8px 26px rgba(17,25,44,.12);
+}
+.about-figure-col img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-figure-col::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(17,25,44,0) 65%,
+    rgba(17,25,44,.16) 100%);
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .about-figure-col { aspect-ratio: 16 / 10; margin-top: 1.5rem; }
+}
+
+/* Contact-section soft banner sits above the contact-grid */
+.contact-banner {
+  position: relative;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 32 / 9;
+  max-height: 300px;
+  box-shadow: 0 6px 22px rgba(17,25,44,.10);
+}
+.contact-banner img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  object-position: 50% 60%;
+}
+.contact-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg,
+    rgba(17,25,44,.30) 0%, rgba(17,25,44,0) 45%);
+  pointer-events: none;
+}
+@media (max-width: 640px) {
+  .contact-banner { aspect-ratio: 3 / 2; max-height: none; }
+}
+
+/* Respect reduced-motion / print — hide decorative photos in print */
+@media print {
+  .hero .hero-bg,
+  .scene-banner,
+  .about-figure,
+  .contact-banner { display: none !important; }
+}
+
 </style>
 </head>
 <body>
@@ -882,6 +1013,8 @@ p  { margin: 0 0 1rem; color: var(--ink); }
 
   <!-- ============ Hero ============ -->
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"><picture><source type="image/webp" srcset="assets/img/hero-960.webp 960w, assets/img/hero-1920.webp 1920w" sizes="100vw"><img src="assets/img/hero-1920.jpg" srcset="assets/img/hero-960.jpg 960w, assets/img/hero-1920.jpg 1920w" sizes="100vw" alt="" fetchpriority="high" decoding="async"></picture></div>
+
     <div class="container hero-inner">
       <div>
         <span class="hero-eyebrow">Advocates · NGO · Civic Educators</span>
@@ -965,6 +1098,18 @@ p  { margin: 0 0 1rem; color: var(--ink); }
           and a registered NGO arm partnering with civic actors to expand
           access to justice across the country.
         </p>
+        <figure class="about-figure-col reveal" data-delay="2">
+          <picture>
+            <source type="image/webp"
+                    srcset="assets/img/about-960.webp 960w, assets/img/about-1920.webp 1920w"
+                    sizes="(min-width: 900px) 44vw, 100vw">
+            <img src="assets/img/about-1920.jpg"
+                 srcset="assets/img/about-960.jpg 960w, assets/img/about-1920.jpg 1920w"
+                 sizes="(min-width: 900px) 44vw, 100vw"
+                 alt="Sunlit chambers of a Kenyan law firm: leather-bound law reports, brass desk lamp, and mahogany reading table."
+                 loading="lazy" decoding="async">
+          </picture>
+        </figure>
       </div>
 
       <div class="reveal" data-delay="1">
@@ -1025,6 +1170,8 @@ p  { margin: 0 0 1rem; color: var(--ink); }
         </p>
       </div>
 
+      
+      <figure class="scene-banner reveal" aria-label="Case folders and legal texts arranged on a Kenyan advocate’s desk."><picture><source type="image/webp" srcset="assets/img/practice-960.webp 960w, assets/img/practice-1920.webp 1920w" sizes="(min-width: 900px) 90vw, 100vw"><img src="assets/img/practice-1920.jpg" srcset="assets/img/practice-960.jpg 960w, assets/img/practice-1920.jpg 1920w" sizes="(min-width: 900px) 90vw, 100vw" alt="Five case folders tied with red legal ribbon on a Kenyan advocate’s desk, alongside a fountain pen, reading glasses, and the Daily Nation." loading="lazy" decoding="async"></picture></figure>
       <div class="practice-grid">
         <article class="practice-card reveal">
           <span class="icon" aria-hidden="true">
@@ -1136,6 +1283,8 @@ p  { margin: 0 0 1rem; color: var(--ink); }
         </p>
       </div>
 
+      
+      <figure class="scene-banner reveal" aria-label="Consultation across a Kenyan law firm boardroom table."><picture><source type="image/webp" srcset="assets/img/services-960.webp 960w, assets/img/services-1920.webp 1920w" sizes="(min-width: 900px) 90vw, 100vw"><img src="assets/img/services-1920.jpg" srcset="assets/img/services-960.jpg 960w, assets/img/services-1920.jpg 1920w" sizes="(min-width: 900px) 90vw, 100vw" alt="Two advocates working across a mahogany conference table with a laptop and open document, Nairobi skyline seen through louvered blinds." loading="lazy" decoding="async"></picture></figure>
       <div class="services-grid">
 
         <article class="service-card reveal">
@@ -1237,6 +1386,8 @@ p  { margin: 0 0 1rem; color: var(--ink); }
         </p>
       </div>
 
+      
+      <figure class="scene-banner reveal" aria-label="Interior of a Kenyan courtroom."><picture><source type="image/webp" srcset="assets/img/team-courtroom-960.webp 960w, assets/img/team-courtroom-1920.webp 1920w" sizes="(min-width: 900px) 90vw, 100vw"><img src="assets/img/team-courtroom-1920.jpg" srcset="assets/img/team-courtroom-960.jpg 960w, assets/img/team-courtroom-1920.jpg 1920w" sizes="(min-width: 900px) 90vw, 100vw" alt="Interior of a Kenyan courtroom with the Coat of Arms of Kenya, a Kenyan flag, and the bench." loading="lazy" decoding="async"></picture></figure>
       <div class="team-grid">
         <article class="team-card reveal">
           <div class="team-photo" aria-hidden="true">
@@ -1300,6 +1451,8 @@ p  { margin: 0 0 1rem; color: var(--ink); }
         </p>
       </div>
 
+      
+      <figure class="contact-banner reveal" aria-label="Office building in Nairobi at blue hour with jacaranda blossoms."><picture><source type="image/webp" srcset="assets/img/contact-960.webp 960w, assets/img/contact-1920.webp 1920w" sizes="(min-width: 900px) 90vw, 100vw"><img src="assets/img/contact-1920.jpg" srcset="assets/img/contact-960.jpg 960w, assets/img/contact-1920.jpg 1920w" sizes="(min-width: 900px) 90vw, 100vw" alt="Discreet sandstone office building in Nairobi at blue hour, with a flowering jacaranda tree at the entrance and the city skyline behind." loading="lazy" decoding="async"></picture></figure>
       <div class="contact-grid">
         <aside class="contact-card reveal">
           <span class="eyebrow">Office &amp; Channels</span>
