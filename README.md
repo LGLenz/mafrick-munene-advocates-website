@@ -18,7 +18,7 @@ The project is part of the **Partnership Proposal: Mafrick & Company Advocates &
   - Youth & women empowerment
   - Human rights
   - Data protection training & assessments
-- **Partnership Contact:** ELB Consulting Tech (elenz@elbconsultingtech.com)
+- **Partnership Contact:** ELB Consulting Tech (elias-lenz@elbconsultingtech.com)
 
 ## Project Scope
 
@@ -127,4 +127,4 @@ end-to-end is confirmed, flip the `custom-domain` target in
 - [ELB Consulting Tech](https://elbconsultingtech.com) — Parent consulting entity
 
 ---
-*Managed by ELB Consulting Tech · elenz@elbconsultingtech.com*
+*Managed by ELB Consulting Tech · elias-lenz@elbconsultingtech.com*
