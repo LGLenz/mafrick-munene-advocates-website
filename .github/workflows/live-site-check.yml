@@ -59,8 +59,15 @@ jobs:
               days="n/a"; echo "::error::$host: could not read TLS certificate"; fail=1
             fi
 
-            plain=$(curl -s -o /dev/null -L --max-time 20 -w '%{url_effective}' "http://$host/" 2>/dev/null || echo "ERR")
-            case "$plain" in https://*) redir="yes";; *) redir="no ($plain)"; echo "::warning::http://$host does not redirect to HTTPS";; esac
+            if plain=$(curl -sS -o /dev/null -L --max-time 20 -w '%{url_effective}' "http://$host/"); then
+              case "$plain" in
+                https://*) redir="yes";;
+                *) redir="no ($plain)"; echo "::error::http://$host does not redirect to HTTPS"; fail=1;;
+              esac
+            else
+              redir="no (request failed)"
+              echo "::error::http://$host redirect check failed"; fail=1
+            fi
 
             summary+="| $u | $code | $final | $days | $redir |\n"
           done
